@@ -12,17 +12,29 @@ Egg-Authz is an authorization middleware for [Egg](https://github.com/eggjs/egg)
 ## Installation
 
 ```
-npm install egg-authz
+npm install koa-authz
 ```
 
 ## Then create a file in middleware directory to import the module.
 
 ```js
 // app/middleware/authz.js
-const authz =  require('egg-authz')
+module.exports = require('koa-authz')
+```
 
-module.exports = (options) => {
-  return authz
+```js
+// config/config.default.js
+const { Enforcer } = require('casbin')
+module.exports = {
+  middleware: [ 'authz' ],
+  authz: {
+    enable: true,
+    newEnforcer: async() => {
+      // load the casbin model and policy from files, database is also supported.
+      const enforcer = await Enforcer.newEnforcer('authz_model.conf', 'authz_policy.csv')
+      return enforcer
+    }
+  }
 }
 ```
 
