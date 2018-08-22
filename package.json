@@ -4,8 +4,10 @@
   "description": "egg-authz is an authorization middleware for Egg.js",
   "main": "authz.js",
   "scripts": {
-    "test": "nyc npm run test-only",
-    "test-only": "mocha --reporter spec test/test.js"
+    "prepublish": "npm run fix && npm run lint && npm run test",
+    "fix": "eslint --fix app config",
+    "lint": "eslint app config",
+    "test": "egg-bin test"
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,6 @@
     "email": "18875906195@163.com"
   },
   "license": "Apache-2.0",
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "report-dir": "./coverage"
-  },
   "engines": {
     "node": ">= 7.6.0"
   },
@@ -39,14 +34,17 @@
     "url": "https://github.com/node-casbin/egg-authz/issues"
   },
   "homepage": "https://github.com/node-casbin/egg-authz#readme",
-  "dependencies": {
-    "egg": "^2.10.0",
-    "koa-authz": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "egg": "^2.10.0",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "supertest": "^3.1.0"
+    "egg-bin": "^4.8.1",
+    "egg-mock": "^3.19.3",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "koa-authz": "^1.0.0"
   }
 }
