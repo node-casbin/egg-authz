@@ -1,1 +1,1 @@
-module.exports = require('koa-authz')
+module.exports = require('../../authz')
