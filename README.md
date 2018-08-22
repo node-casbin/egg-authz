@@ -1,25 +1,30 @@
+Egg-Authz 
+====
+[![NPM version][npm-image]][npm-url]
+[![NPM download][download-image]][download-url]
+[![codebeat badge](https://codebeat.co/badges/9defa882-898c-4dcb-91a6-7e8f061ccaac)](https://codebeat.co/projects/github-com-node-casbin-egg-authz-master)
+[![Build Status](https://travis-ci.org/node-casbin/egg-authz.svg?branch=master)](https://travis-ci.org/node-casbin/egg-authz)
+[![Coverage Status](https://coveralls.io/repos/github/node-casbin/egg-authz/badge.svg?branch=master)](https://coveralls.io/github/node-casbin/egg-authz?branch=master)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/casbin/lobby)
 
-# Egg-Authz 
+[npm-image]: https://img.shields.io/npm/v/egg-authz.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/egg-authz
+[download-image]: https://img.shields.io/npm/dm/egg-authz.svg?style=flat-square
+[download-url]: https://npmjs.org/package/egg-authz
 
-[![Build Status](https://travis-ci.org/gin-contrib/authz.svg)](https://travis-ci.org/gin-contrib/authz)
-[![codecov](https://codecov.io/gh/gin-contrib/authz/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-contrib/authz)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/authz)](https://goreportcard.com/report/github.com/gin-contrib/authz)
-[![GoDoc](https://godoc.org/github.com/gin-contrib/authz?status.svg)](https://godoc.org/github.com/gin-contrib/authz)
-[![Join the chat at https://gitter.im/gin-gonic/gin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gin-gonic/gin)
+Egg-Authz is an authorization middleware for [Egg](https://eggjs.org/), it's based on ``Node-Casbin``: [https://github.com/casbin/node-casbin](https://github.com/casbin/node-casbin).
 
-Egg-Authz is an authorization middleware for [Egg](https://github.com/eggjs/egg), it's based on [https://github.com/casbin/node-casbin](https://github.com/casbin/node-casbin).
+## 1. Installation
 
-## Installation
-
+```shell
+npm install --save egg-authz
 ```
-npm install koa-authz
-```
 
-## Then create a file in middleware directory to import the module.
+## 2. Create a file in middleware directory to import the module.
 
 ```js
 // app/middleware/authz.js
-module.exports = require('koa-authz')
+module.exports = require('egg-authz')
 ```
 
 ```js
@@ -38,9 +43,9 @@ module.exports = {
 }
 ```
 
-## Then enable the middleware in yout config files.
+## 3. Enable the middleware in your config files.
 
-## Documentation
+## How to control the access
 
 The authorization determines a request based on ``{subject, object, action}``, which means what ``subject`` can perform what ``action`` on what ``object``. In this plugin, the meanings are:
 
@@ -49,12 +54,12 @@ The authorization determines a request based on ``{subject, object, action}``, w
 3. ``action``: HTTP method like GET, POST, PUT, DELETE, or the high-level actions you defined like "read-file", "write-blog"
 
 
-For how to write authorization policy and other details, please refer to [the Casbin's documentation](https://github.com/casbin/casbin).
+For how to write authorization policy and other details, please refer to [the Casbin's documentation](https://casbin.org).
 
 ## Getting Help
 
-- [Casbin](https://github.com/casbin/casbin)
+- [Node-Casbin](https://github.com/casbin/node-casbin)
 
 ## License
 
-This project is under MIT License. See the [LICENSE](LICENSE) file for the full license text.
+This project is licensed under the [Apache 2.0 license](LICENSE).
