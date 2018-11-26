@@ -34,7 +34,9 @@
     "url": "https://github.com/node-casbin/egg-authz/issues"
   },
   "homepage": "https://github.com/node-casbin/egg-authz#readme",
-  "dependencies": {},
+  "dependencies": {
+    "koa-authz": "^1.0.0"
+  },
   "devDependencies": {
     "coveralls": "^3.0.2",
     "egg": "^2.10.0",
@@ -45,7 +47,6 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "koa-authz": "^1.0.0"
+    "eslint-plugin-standard": "^3.1.0"
   }
 }
