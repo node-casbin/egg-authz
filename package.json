@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/node-casbin/egg-authz#readme",
   "dependencies": {
-    "koa-authz": "^1.0.0"
+    "koa-authz": "^1.0.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
