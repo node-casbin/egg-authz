@@ -1,4 +1,4 @@
-const { Enforcer } = require('casbin')
+const { newEnforcer } = require('casbin')
 
 module.exports = {
   middleware: [ 'user', 'authz' ],
@@ -6,7 +6,7 @@ module.exports = {
     enable: true,
     newEnforcer: async () => {
       // load the casbin model and policy from files, database is also supported.
-      const enforcer = await Enforcer.newEnforcer('examples/authz_model.conf', 'examples/authz_policy.csv')
+      const enforcer = await newEnforcer('examples/authz_model.conf', 'examples/authz_policy.csv')
       return enforcer
     }
   }

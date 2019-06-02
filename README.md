@@ -29,14 +29,14 @@ module.exports = require('egg-authz')
 
 ```js
 // config/config.default.js
-const { Enforcer } = require('casbin')
+const casbin = require('casbin')
 module.exports = {
   middleware: [ 'authz' ],
   authz: {
     enable: true,
     newEnforcer: async() => {
       // load the casbin model and policy from files, database is also supported.
-      const enforcer = await Enforcer.newEnforcer('authz_model.conf', 'authz_policy.csv')
+      const enforcer = await casbin.newEnforcer('authz_model.conf', 'authz_policy.csv')
       return enforcer
     }
   }
