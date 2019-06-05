@@ -15,9 +15,14 @@ Egg-Authz
 Egg-Authz is an authorization middleware for [Egg](https://eggjs.org/), it's based on ``Node-Casbin``: [https://github.com/casbin/node-casbin](https://github.com/casbin/node-casbin).
 
 ## 1. Installation
-
+### use casbin v2.x
 ```shell
-npm install --save egg-authz
+npm install casbin@2 egg-authz@2 --save
+```
+
+### use casbin v3.x
+```shell
+npm install casbin@3 egg-authz@3 --save
 ```
 
 ## 2. Create a file in middleware directory to import the module.

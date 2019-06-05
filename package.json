@@ -38,10 +38,10 @@
     "registry": "https://registry.yarnpkg.com/"
   },
   "dependencies": {
-    "koa-authz": "^2.0.0"
+    "koa-authz": "^3.0.0"
   },
   "devDependencies": {
-    "casbin": "^2.0.4",
+    "casbin": "^3.0.0",
     "coveralls": "^3.0.2",
     "egg": "^2.10.0",
     "egg-bin": "^4.8.1",
@@ -54,6 +54,6 @@
     "eslint-plugin-standard": "^3.1.0"
   },
   "peerDependencies": {
-    "casbin": "^2.0.4"
+    "casbin": "^3.0.0"
   }
 }
