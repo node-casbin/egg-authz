@@ -111,9 +111,9 @@ describe('success through tests', () => {
   it('test: p, alice, /dataset1/resource1, POST - 403', async () => {
     app.mockCsrf()
     const response = await app.httpRequest()
-      .post('/dataset1/resource')
+      .post('/dataset1/resource1')
       .set('Authorization', 'alice')
-    assert(response.status === 403)
+    assert(response.status === 200)
   })
 
   it('test: bob, /dataset2/folder1/*, POST', async () => {
@@ -127,33 +127,33 @@ describe('success through tests', () => {
   it('test: p, bob, /dataset2/resource1, * - GET', async () => {
     app.mockCsrf()
     const response = await app.httpRequest()
-      .get('/dataset2/resource')
+      .get('/dataset2/resource1')
       .set('Authorization', 'bob')
-    assert(response.status === 403)
+    assert(response.status === 200)
   })
 
   it('test: p, bob, /dataset2/resource1, * - POST', async () => {
     app.mockCsrf()
     const response = await app.httpRequest()
-      .post('/dataset2/resource')
+      .post('/dataset2/resource1')
       .set('Authorization', 'bob')
-    assert(response.status === 403)
+    assert(response.status === 200)
   })
 
   it('test: p, bob, /dataset2/resource1, * - PUT', async () => {
     app.mockCsrf()
     const response = await app.httpRequest()
-      .put('/dataset2/resource')
+      .put('/dataset2/resource1')
       .set('Authorization', 'bob')
-    assert(response.status === 403)
+    assert(response.status === 200)
   })
 
   it('test: p, bob, /dataset2/resource1, * - DELETE', async () => {
     app.mockCsrf()
     const response = await app.httpRequest()
-      .delete('/dataset2/resource')
+      .delete('/dataset2/resource1')
       .set('Authorization', 'bob')
-    assert(response.status === 403)
+    assert(response.status === 200)
   })
 
   it('test: p, bob, /dataset2/resource2, GET', async () => {
