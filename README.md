@@ -5,7 +5,7 @@ Egg-Authz
 [![codebeat badge](https://codebeat.co/badges/9defa882-898c-4dcb-91a6-7e8f061ccaac)](https://codebeat.co/projects/github-com-node-casbin-egg-authz-master)
 [![Build Status](https://travis-ci.org/node-casbin/egg-authz.svg?branch=master)](https://travis-ci.org/node-casbin/egg-authz)
 [![Coverage Status](https://coveralls.io/repos/github/node-casbin/egg-authz/badge.svg?branch=master)](https://coveralls.io/github/node-casbin/egg-authz?branch=master)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/casbin/lobby)
+[![Discord](https://img.shields.io/discord/1022748306096537660?logo=discord&label=discord&color=5865F2)](https://discord.gg/S5UjpzGZjN)
 
 [npm-image]: https://img.shields.io/npm/v/egg-authz.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-authz
